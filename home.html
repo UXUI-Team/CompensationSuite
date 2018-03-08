@@ -67,8 +67,8 @@
 
 <!-- modals -->
     <!-- calculator modal -->
-    <div class="modal fade" id="calculatorModal" tabindex="-1" role="dialog" aria-labelledby="calculatorModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
+    <div class="modal fade calculatorModal-modal-lg" id="calculatorModal" tabindex="-1" role="dialog" aria-labelledby="calculatorModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title" id="calculatorModalLabel">Co-op Salary Calculator</h5>
@@ -77,11 +77,141 @@
               </button>
             </div>
             <div class="modal-body">
-              ...
-            </div>
+              <div class="form-group">
+                <h5>Candidate Name:</h5>
+                  <input type="name" class="form-control" id="name" name="name">
+              </div>
+              <form>
+                <div class="form-row">
+                  <div class="form-group col-md-4">
+                    <label for="Education">Education Level</label>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="educationRadio" id="pre-freshman" value="Pre-Freshman" checked>
+                      <label class="form-check-label" for="pre-freshman">Pre-Freshman </label>                        
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="educationRadio" id="undergraduate" value="Undergraduate">
+                      <label class="form-check-label" for="undergraduate">Undergraduate </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="educationRadio" id="graduate" value="Graduate">
+                      <label class="form-check-label" for="graduate">Graduate </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="educationRadio" id="phd" value="PhD">
+                      <label class="form-check-label" for="phd">PhD</label>
+                    </div>
+                  </div>
+
+                  <div class="form-group col-md-5">
+                    <label for="formerIbm">Former IBM Co-op ?</label>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="formerRadio" value="yes" id="yesFormer">
+                      <label class="form-check-label" for="yesFormer">Yes </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="formerRadio" value="no" id="noFormer" checked>
+                      <label class="form-check-label" for="noFormer">No</label>
+                    </div>
+                  </div>
+        
+                  <div class="form-group col-md-3">
+                      <label for="formerIbm">GBS ?</label>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="gbsRadio" value="yes" id="yesGbs">
+                      <label class="form-check-label" for="yesGbs">Yes </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="gbsRadio" value="no" id="noGbs" checked>                        <label class="form-check-label" for="noGbs">No</label>
+                    </div>
+                  </div>
+                </div> <!--end form-row-->
+                <hr>
+                <h5>Enter Credits</h5>
+                <div class="form-row">
+                  <div class="form-group col-md-4">
+                    <label for="completed">Completed</label>
+                    <input type="text" class="form-control" id="credCompleted" name="credCompleted">
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="required">Required</label>
+                    <input type="text" class="form-control" id="credRequired" name="credRequired">
+                </div> <!--end form-row-->
+                  <div class="form-group col-md-4">
+                    <label for="percentage">%</label>
+                    <input type="text" class="form-control" id="credPercent" name="credPercent">
+                  </div>
+                </div> <!-- end form-row -->
+
+                <div class="form-row">
+                  <div class="form-group col-md-4">
+                    <label for="managerAdd">Optional Manager Adder</label>
+                  </div>
+                  <div class="form-group col-md-4">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="checkManager">
+                    </div>
+                  </div>
+                  <div class="form-group col-md-4">
+                      <input type="text" class="form-control" id="percentManager" name="percentManager">
+                  </div>
+                </div> <!-- end form-row -->
+
+                <div class="form-row">
+                  <div class="form-group col-md-4">
+                    <label for="studentStat">Student Status</label>
+                  </div>
+                  <div class="form-group col-md-8">
+                    <input type="text" class="form-control" id="studentStatus" name="studentStatus">
+                  </div>
+                </div> <!-- end form-row -->
+                <div class="form-row justify-content-end">
+                  <div class="form-group">
+                    <button type="button" class="btn btn-primary" disabled>Special</button>
+                    <button type="submit" class="btn btn-primary" id="calculate">Calculate</button>
+                  </div>
+                </div><!--end form-row-->
+                <hr>
+                <h5>Student Pay Rate</h5>
+                <div class="form-row">
+                  <div class="form-group col-md-5">
+                    <label for="techBlue">Extreme Blue/Research</label>
+                  </div>
+                  <div class="form-group col-md-7">
+                    <input type="text" class="form-control" id="extremeBlue" name="techExtremeBlue">
+                  </div>
+                </div> <!-- end form-row -->
+
+                <div class="form-row">
+                  <div class="form-group col-md-5">
+                    <label for="noTechBlue">Technical</label>
+                  </div>
+                  <div class="form-group col-md-7">
+                    <input type="text" class="form-control" id="technical" name="noExtremeBlue">
+                  </div>
+                </div> <!-- end form-row -->
+                <div class="form-row">
+                  <div class="form-group col-md-5">
+                    <label for="noTech">Non-Technical</label>
+                  </div>
+                  <div class="form-group col-md-7">
+                    <input type="text" class="form-control" id="nonTech" name="nonTech">
+                  </div>
+                </div> <!-- end form-row -->
+                <div class="form-row">
+                  <div class="form-group col-md-5">
+                    <label for="global">Delivery Services</label>
+                  </div>
+                  <div class="form-group col-md-7">
+                    <input type="text" class="form-control" id="deliveryservices" name="globalBusiness">
+                  </div>
+                </div> <!-- end form-row -->
+            </div><!--end modal-body-->
             <div class="modal-footer">
+              <button type="button" class="btn btn-primary">Summary</button>
+              <button type="reset" class="btn btn-primary">Clear</button>
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
+              
             </div>
           </div>
         </div>
@@ -140,11 +270,25 @@
               </button>
             </div>
             <div class="modal-body">
-              ...
-            </div>
+                <div class="form-row">
+                    <div class="col col-md-5">
+                      <p class="mb-4">Reference Salary</p>
+                      <p class="mb-4">Base Salary</p>
+                      <p class="mb-4">Incentives</p>
+                      <p class="mb-4">On Target Earnings</p>
+                    </div>
+                    <div class="col col-md-7">
+                      <input type="text" class="form-control mb-2" id="referenceSalary" name="refSalary">
+                      <input type="text" class="form-control mb-2" id="baseSalary" name="baseSalary">
+                      <input type="text" class="form-control mb-2" id="incentives" name="incentives">
+                      <input type="text" class="form-control mb-2" id="onTarget" name="onTarget">
+                    </div>
+                </div>
+            </div> <!--end modal-body-->
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
+                <button type="button" class="btn btn-primary">Validate</button>
+                <button type="reset" class="btn btn-primary">Clear</button>                            
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             </div>
           </div>
         </div>
@@ -161,11 +305,39 @@
               </button>
             </div>
             <div class="modal-body">
-              ...
-            </div>
+              <div class="form-row">
+                <h5>Degree or Program</h5>
+                <select id="degreeOrProgram" class="form-control mb-2">
+                </select>
+                <button type="button" class="btn btn-primary mb-1">Calculate</button>
+              </div>
+              <hr>
+              <div class="row justify-content-end">
+                <div class="col col-md-4"><h6>Minimum</h6></div>
+                <div class="col col-md-4"><h6>Maximun</h6></div>
+              </div>
+              <div class="row">
+                <div class="col col-md-4">
+                  <p class="mb-4">Regional</p>
+                  <p class="mb-4">National</p>
+                  <p class="mb-4">Premium</p>
+                </div>
+                <div class="col col-md-4">
+                  <input type="text" class="form-control mb-1" id="regionalMin">
+                  <input type="text" class="form-control mb-1" id="nationalMin">
+                  <input type="text" class="form-control mb-1" id="premiumMin">
+                </div>
+                <div class="col col-md-4">
+                  <input type="text" class="form-control mb-1" id="regionalMax">
+                  <input type="text" class="form-control mb-1" id="nationallMax">
+                  <input type="text" class="form-control mb-1" id="premiumlMax">
+                </div>
+              </div>
+            </div><!--end modal-body-->
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
+              <button type="button" class="btn btn-primary">Make Exempt</button>
+              <button type="button" class="btn btn-primary">Make Non-Exempt</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>          
             </div>
           </div>
         </div>
