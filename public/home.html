@@ -9,13 +9,12 @@
     <!-- bootstrap CDN -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <!-- link to stylesheet -->
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
 <body>
     <!-- navbar    -->
         <nav class="navbar navbar-expand-lg navbar-light bg-primary">
-                <a class="navbar-brand" href="#">Navbar</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
@@ -36,32 +35,32 @@
                     <h1 class="display-4">IBM Compensation Suite</h1>
                 </div>
             </div>
+          
         <!-- buttons -->
-            <div class="row text-center m-5">
-                <div class="col-lg-4">
+            <div class="row text-center">
+                <div class="col-md-6 mb-3">
                     <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#calculatorModal">Co-op Salary Calculator</button>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-md-6 mb-3">
                     <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#compensationModal">Lookup Compensation Tool</button>
                 </div>
-                <div class="col-lg-4">    
+                <div class="col-md-6 mb-3">    
                     <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#conversionModal">Pay Rate Conversion Tool</button>
                 </div>
-            </div>
-            <div class="row text-center m-5">
-                <div class="col-lg-6">
+                <div class="col-md-6 mb-3">
                     <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#validationModal">Sales Plan Validation</button>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-md-6 mb-3">
                     <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#universityModal">University Rates</button>
-                </div>
+                </div>  
             </div>
-        </div>
+          </div>
+      
 
         <br>
 <!-- footer -->
     <div class="fixed-bottom p-3 bg-primary text-center">
-        This is the footer.
+        
     </div>
 
 
@@ -327,34 +326,34 @@
                   <h5>Job Type</h5>
                     <div>
                       <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                        <label class="form-check-label" for="inlineRadio1">Regular</label>
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="regularRadio" value="option1">
+                        <label class="form-check-label" for="regularRadio">Regular</label>
                       </div>
                       <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                        <label class="form-check-label" for="inlineRadio2">Short-Term Supplemental</label>
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="shortTermRadio" value="option2">
+                        <label class="form-check-label" for="shortTermRadio">Short-Term Supplemental</label>
                       </div>
                     </div>
                     <div>
                       <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
-                        <label class="form-check-label" for="inlineRadio3">Co-op</label>
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="co-opRadio" value="option3">
+                        <label class="form-check-label" for="co-opRadio">Co-op</label>
                       </div>
                       <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">
-                        <label class="form-check-label" for="inlineRadio4">Long-Term Supplemental</label>
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="longTermRadio" value="option4">
+                        <label class="form-check-label" for="longTermRadio">Long-Term Supplemental</label>
                       </div>
                     </div>
                 </div>
                 <div class="col-md-4" id="exempt">
                   <h5>Exempt?</h5>
                   <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                      <label class="form-check-label" for="inlineRadio1">Regular</label>
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="yesRadio" value="option1">
+                      <label class="form-check-label" for="yesRadio">Yes</label>
                     </div>
                     <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                      <label class="form-check-label" for="inlineRadio2">Short-Term Supplemental</label>
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="noRadio" value="option2">
+                      <label class="form-check-label" for="noRadio">No</label>
                   </div>
                 </div>
               </div>
@@ -492,7 +491,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <!-- link to js file -->
-    <script type="text/javascript" src="home.js"></script>
+    <script type="text/javascript" src="js/home.js"></script>
 </body>
 
 </html>
